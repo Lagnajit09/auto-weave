@@ -1,10 +1,10 @@
-import { HeroParallax } from "@/components/global/connect-parallax";
+import Plans from "@/components/custom/plans";
 import { ContainerScroll } from "@/components/global/Container-scroll-animation";
 import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { LampComponent } from "@/components/global/lamp";
 import Navbar from "@/components/global/Navbar";
 import { Button } from "@/components/ui/button";
-import { clients, products } from "@/lib/constants";
+import { clients } from "@/lib/constants";
 import React from "react";
 
 const Home = () => {
@@ -42,8 +42,13 @@ const Home = () => {
       {/* <section className="max-w-[100vw] overflow-x-hidden">
         <HeroParallax products={products}></HeroParallax>
       </section> */}
-      <section className="w-full mt-[-100px]">
+      <section className="w-full md:mt-[-100px] mt-[160px]">
         <LampComponent />
+        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-64">
+          <Plans title="Hobby" price="0" />
+          <Plans title="Pro Plan" price="29" />
+          <Plans title="Unlimited" price="99" />
+        </div>
       </section>
     </main>
   );
