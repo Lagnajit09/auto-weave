@@ -42,7 +42,7 @@ const Home = () => {
       {/* <section className="max-w-[100vw] overflow-x-hidden">
         <HeroParallax products={products}></HeroParallax>
       </section> */}
-      <section className="w-full md:mt-[-100px] mt-[160px]">
+      <section className="w-full md:mt-[-100px] mt-[160px] mb-24">
         <LampComponent />
         <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-64">
           <Plans title="Hobby" price="0" />
