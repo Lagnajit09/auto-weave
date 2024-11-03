@@ -17,8 +17,8 @@ import { ThemeProvider } from "@/components/Providers/theme-provider";
 const font = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AutoWeave",
-  description: "Make your work automated",
+  title: "Blync",
+  description: "Sync your work in a Blink",
 };
 
 export default function RootLayout({

@@ -1,18 +1,22 @@
+import { HeroParallax } from "@/components/global/connect-parallax";
 import { ContainerScroll } from "@/components/global/Container-scroll-animation";
+import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
+import { LampComponent } from "@/components/global/lamp";
 import Navbar from "@/components/global/Navbar";
 import { Button } from "@/components/ui/button";
+import { clients, products } from "@/lib/constants";
 import React from "react";
 
-const page = () => {
+const Home = () => {
   return (
-    <main>
+    <main className="flex flex-col items-center justify-center">
       <Navbar />
-      <section className="h-screen w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
+      <section className="h-screen w-full bg-neutral-950 rounded-md !overflow-visible relative flex flex-col items-center antialiased">
         <div className="absolute inset-0  h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]"></div>
         <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
           <ContainerScroll
             titleComponent={
-              <div className="flex items-center flex-col">
+              <div className="flex items-center justify-center flex-col">
                 <Button
                   size={"lg"}
                   className="p-8 mb-8 md:mb-0 text-2xl w-full sm:w-fit border-t-2 rounded-full border-[#4D4D4D] bg-[#1F1F1F] hover:bg-white group transition-all flex items-center justify-center gap-4 hover:shadow-xl hover:shadow-neutral-500 duration-500"
@@ -29,8 +33,20 @@ const page = () => {
           />
         </div>
       </section>
+      <InfiniteMovingCards
+        className="md:mt-[30rem] mt-[-150px]"
+        items={clients}
+        direction="right"
+        speed="slow"
+      />
+      {/* <section className="max-w-[100vw] overflow-x-hidden">
+        <HeroParallax products={products}></HeroParallax>
+      </section> */}
+      <section className="w-full mt-[-100px]">
+        <LampComponent />
+      </section>
     </main>
   );
 };
 
-export default page;
+export default Home;
