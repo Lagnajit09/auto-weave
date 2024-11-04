@@ -9,7 +9,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="w-screen overflow-hidden flex flex-col items-center justify-center">
       <Navbar />
       <section className="h-screen w-full bg-neutral-950 rounded-md !overflow-visible relative flex flex-col items-center antialiased">
         <div className="absolute inset-0  h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]"></div>
@@ -34,7 +34,7 @@ const Home = () => {
         </div>
       </section>
       <InfiniteMovingCards
-        className="md:mt-[30rem] mt-[-150px]"
+        className="md:mt-[30rem] mt-[280px]"
         items={clients}
         direction="right"
         speed="slow"
@@ -42,7 +42,7 @@ const Home = () => {
       {/* <section className="max-w-[100vw] overflow-x-hidden">
         <HeroParallax products={products}></HeroParallax>
       </section> */}
-      <section className="w-full md:mt-[-100px] mt-[160px] mb-24">
+      <section className="w-full md:mt-[-100px] mt-[-100px] mb-24">
         <LampComponent />
         <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-64">
           <Plans title="Hobby" price="0" />
