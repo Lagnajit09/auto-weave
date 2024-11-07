@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className}`}>
+      <body className={`${font.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

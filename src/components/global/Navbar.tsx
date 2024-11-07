@@ -8,7 +8,7 @@ type Props = {};
 
 const Navbar = async (props: Props) => {
   return (
-    <header className="fixed right-0 left-0 top-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-between">
+    <header className="max-w-[100vw] fixed right-0 left-0 top-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-between">
       <aside className="flex items-center gap-[2px]">
         <Logo />
       </aside>
@@ -34,7 +34,7 @@ const Navbar = async (props: Props) => {
           </li>
         </ul>
       </nav>
-      <aside className="flex items-center gap-4">
+      <div className="flex items-center gap-4">
         <Link
           href="/dashboard"
           className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
@@ -47,7 +47,7 @@ const Navbar = async (props: Props) => {
         </Link>
         {/* WIP: User auth */}
         <MenuIcon className="md:hidden" />
-      </aside>
+      </div>
     </header>
   );
 };
