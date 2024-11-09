@@ -6,18 +6,18 @@ import { db } from "@/lib/db";
 type Props = {};
 
 const Settings = (props: Props) => {
-  const removeProfileImage = async () {
-    'use server'
-    const response = await db.user.update({
-      where: {
-        clerkId: authUser.id,
-      },
-      data: {
-        profileImage: '',
-      },
-    })
-    return response;
-  }
+  // const removeProfileImage = async () => {
+  //   "use server";
+  //   const response = await db.user.update({
+  //     where: {
+  //       clerkId: authUser.id,
+  //     },
+  //     data: {
+  //       profileImage: "",
+  //     },
+  //   });
+  //   return response;
+  // };
 
   return (
     <div className="flex flex-col gap-4">

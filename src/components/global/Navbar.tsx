@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "../custom/Logo";
+import { UserButton } from "@clerk/nextjs";
 
 type Props = {};
 
@@ -46,6 +47,7 @@ const Navbar = async (props: Props) => {
           </span>
         </Link>
         {/* WIP: User auth */}
+        <UserButton />
         <MenuIcon className="md:hidden" />
       </div>
     </header>
