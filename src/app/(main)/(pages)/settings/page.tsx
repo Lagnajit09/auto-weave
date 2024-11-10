@@ -38,6 +38,19 @@ const Settings = async (props: Props) => {
     return response;
   };
 
+  const updateUserInfo = async (name: string) => {
+    "use server";
+    const updatedUser = await db.user.update({
+      where: {
+        clerkId: authUser.id,
+      },
+      data: {
+        name,
+      },
+    });
+    return updatedUser;
+  };
+
   return (
     <div className="flex flex-col gap-4">
       <h1 className="sticky top-0 z-[10] flex items-center justify-between border-b bg-background/50 p-5 text-2xl backdrop-blur-lg">
@@ -55,7 +68,7 @@ const Settings = async (props: Props) => {
           onUpload={uploadProfileImage}
           userImage={user?.profileImage || ""}
         />
-        <ProfileForm />
+        <ProfileForm user={user} onUpdate={updateUserInfo} />
       </div>
     </div>
   );
