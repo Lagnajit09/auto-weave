@@ -6,7 +6,7 @@ type Props = {
   searchParams?: { [key: string]: string | undefined };
 };
 
-const page = (props: Props) => {
+const Connections = (props: Props) => {
   return (
     <div className="relative flex flex-col gap-4">
       <h1 className="text-2xl sticky top-0 z-[10] p-5 bg-background/50 backdrop-blur-lg flex items-center border-b">
@@ -32,4 +32,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Connections;
